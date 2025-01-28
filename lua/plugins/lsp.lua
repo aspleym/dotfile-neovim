@@ -24,7 +24,7 @@ return {
 		local cmp_lsp = require("cmp_nvim_lsp")
 		local capabilities = vim.tbl_deep_extend(
 			"force",
-			{},
+            {},
 			vim.lsp.protocol.make_client_capabilities(),
 			cmp_lsp.default_capabilities())
 
@@ -62,8 +62,9 @@ return {
 			cmp.setup({
 				snippet = {
 					expand = function(args)
-						require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-					end,
+						--require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+					    vim.snippet.expand(args.body)
+                    end,
 				},
 				mapping = cmp.mapping.preset.insert({
 					['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
