@@ -1,6 +1,4 @@
-
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -15,10 +13,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", "\"_d")
+vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d")
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -35,12 +33,12 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>bd", function()
-	Snacks.bufdelete()
-end, { desc = "Delete buffer"})
+    Snacks.bufdelete()
+end, { desc = "Delete buffer" })
 
 
 vim.keymap.set("n", "<leader>bo", function()
-	Snacks.bufdelete.other()
-end, { desc = "Delete other buffers"})
+    Snacks.bufdelete.other()
+end, { desc = "Delete other buffers" })
 
-vim.keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to other buffers"})
+vim.keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to other buffers" })
