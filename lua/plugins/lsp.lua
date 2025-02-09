@@ -67,6 +67,16 @@ return {
                         }
                     }
                 end,
+                ["ols"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.ols.setup {
+                        capabilities = capabilities,
+                        init_options = {
+                            enable_fake_methods = true,
+                            enable_references = true
+                        }
+                    }
+                end
             }
         })
 

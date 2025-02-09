@@ -10,6 +10,9 @@ return {
         vim.api.nvim_create_autocmd("BufWritePre", {
             pattern = "*",
             callback = function(args)
+                if vim.bo.filetype == "glsl" then
+                    return
+                end
                 require("conform").format({ bufnr = args.buf, lsp_fallback = true, quiet = true })
             end,
         })
