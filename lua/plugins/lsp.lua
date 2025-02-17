@@ -73,7 +73,10 @@ return {
                         capabilities = capabilities,
                         init_options = {
                             enable_fake_methods = true,
-                            enable_references = true
+                            enable_references = true,
+                            enable_document_symbols = true,
+                            enable_hover = true,
+                            enable_snippets = true
                         }
                     }
                 end
